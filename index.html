@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">     <!-- HE USADO LA METODOLOGÍA BEM PARA REALIZAR ESTA PRÁCTICA -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario Registro</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/> <!-- Link googleapis para fuentes -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"crossorigin="anonymous"/> <!-- Link para iconos -->
+        <link rel="stylesheet" href="style.css"/>       <!-- Hoja de estilo -->
+        
+
+    </head>
+    <body>
+        <main>
+            <form action="" id="formulario" class="formulario">
+
+                <h1>Create Account</h1>
+
+                <!-- Grupo: Nombre -->
+
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" required>
+
+
+                        <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>  <!-- Icono -->
+                    </div>
+
+                    <p class="formulario__input-error">El nombre sólo puede contener letras</p>
+                </div>    
+
+                <!-- Grupo: Email -->
+
+                <div class="formulario__grupo" id="grupo__email">
+                    <label for="email" class="formulario__label">Email</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="email" id="email" required>
+
+
+                        <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <p class="formulario__input-error">Email Inválido</p>
+                </div>
+
+                <!-- Grupo: Contraseña -->
+
+                <div class="formulario__grupo" id="grupo__password">
+                    <label for="password" class="formulario__label">Clave</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password" required>
+
+
+                        <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <p class="formulario__input-error">Debe tener más de 8 caracteres</p>
+                </div>
+
+                <!-- Grupo: Validación Contraseña -->
+
+                <div class="formulario__grupo" id="grupo__password2">
+                    <label for="password2" class="formulario__label">Confirme su clave</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password2" id="password2" required>
+                        
+                        
+                        <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <p class="formulario__input-error">Las contraseñas no coinciden</p>
+                 </div>
+
+                <!-- Grupo: Botón -->
+
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">ENVIAR</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">La inscripción ha sido correcta.</p>
+                </div>
+                
+            </form>
+        </main>
+        
+        <script src="index.js"></script>       <!-- Código en Js --> 
+        <script src="https://kit.fontawesome.com/152072d11e.js" crossorigin="anonymous"></script>   <!-- Link a icono error y success -->
+
+    </body>
+</html>
